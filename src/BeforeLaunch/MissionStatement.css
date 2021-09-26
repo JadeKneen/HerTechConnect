@@ -1,5 +1,12 @@
 .border-quote{
-    border-width: 5px;
-    border-color: rgba(124, 27, 97, 0.2);
-    border-style: solid;
+    color: rgba(124, 27, 96, 0.576);
+    padding: 10px;
+    
+}
+
+.container {
+    max-width: 100%;
+    padding: 50px;
+    max-height: fit-content;
+    display: flex;
 }

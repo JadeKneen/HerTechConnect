@@ -1,4 +1,4 @@
-.container {
+.HTContainer {
     max-width: 100%;
     padding: 50px;
     max-height: fit-content;
@@ -15,12 +15,12 @@
     text-align: center;
   }
   
-  .title {
+.HTtitle {
     color: grey;
     font-size: 18px;
   }
   
-  button {
+button {
     border: none;
     outline: 0;
     display: inline-block;
@@ -31,13 +31,7 @@
     cursor: pointer;
     width: 100%;
     font-size: 18px;
-  }
-  
-  a {
-    text-decoration: none;
-    font-size: 22px;
-    color: white;
-  }
+  }  
   
   button:hover, a:hover {
     opacity: 0.7;

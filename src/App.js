@@ -1,28 +1,63 @@
-import Profile from './BeforeLaunch/Profile'
-import Logo from './images/Logo.svg'
-import Subscribe from './BeforeLaunch/Subscribe';
-import './App.css';
-import MissionStatement from './BeforeLaunch/MissionStatement';
+import "tailwindcss/dist/base.css";
+import "styles/globalStyles.css";
+import React from "react";
+import { css } from "styled-components/macro"; //eslint-disable-line
 
-function App() {
-  return (
-    <div className="App">
-      <div className="logo">
-        <img src={Logo} alt="Logo for HerTechConnect"></img>
-      </div>
-      <p>In 2021, a group of women came together to celebrate International Women's Day with a hackathon.</p> 
-        <p>Motivated by that weekend, we decided to take the leap and set up our own business.</p>
-        <p>It would be a platform which would help women change careers and diversify the technology industry.</p>
-      <Profile/>
-      <p>While we are in the early stages we are reaching out for help.</p>
-      <MissionStatement/>
-      <p>If you would like to help with our initial research check out our survey here:</p>
-      <div className="smallBtn"><a href="https://forms.gle/4ptsui5h8k72AoQVA">Survey</a></div>
-      <p>For anyone interested in helping, either with building the platform, volunteering as a mentor or signing up as a mentee reach out to our team.</p>
-      <p>You can keep up to date with our social media, blog and we even have a newsletter you can subscribe to!</p>
-      <Subscribe/>
-    </div>
+import ComponentRenderer from "ComponentRenderer.js";
+import MainLandingPage from "MainLandingPage.js";
+import ThankYouPage from "ThankYouPage.js";
+import AboutHTCPage from "AboutHTC.js";
+
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+export default function App() {
+  // If you want to disable the animation just use the disabled `prop` like below on your page's component
+   /*return (
+       <AnimationRevealPage disabled>
+	   <Hero />
+	   <Footer />
+	   </AnimationRevealPage>
+	   );*/
+
+
+    return (
+    <Router>
+      <Switch>
+        <Route path="/components/:type/:subtype/:name">
+          <ComponentRenderer />
+        </Route>
+        <Route path="/components/:type/:name">
+          <ComponentRenderer />
+        </Route>
+        <Route path="/thank-you">
+          <ThankYouPage />
+        </Route>
+		<Route path="/about-htc">
+          <AboutHTCPage />
+        </Route>
+        <Route path="/">
+          <MainLandingPage />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
-export default App;
+// export default EventLandingPage;
+// export default HotelTravelLandingPage;
+// export default AgencyLandingPage;
+// export default SaaSProductLandingPage;
+// export default RestaurantLandingPage;
+// export default ServiceLandingPage;
+// export default HostingCloudLandingPage;
+
+// export default LoginPage;
+// export default SignupPage;
+// export default PricingPage;
+// export default AboutUsPage;
+// export default ContactUsPage;
+// export default BlogIndexPage;
+// export default TermsOfServicePage;
+// export default PrivacyPolicyPage;
+
+// export default MainLandingPage;

@@ -1,38 +1,45 @@
 import './Profile.css'
+import jade from "images/Jade.jpg";
+import roshmi from "images/roshmi.jpg";
+import kelly from "images/kelly.jpg";
+import vivian from "images/Vivian.jpg";
+import phoebe from "images/phoebe.jpg";
+
+
 
 function Profile() {
   return (
     <div className="Profile">
-        <div className="container">
+        <div className="HTContainer">
             <div class="card">
-                <h4>Jade</h4>
-                <p class="title">CEO</p>
+                <h4><b>Jade</b></h4>
+                <img src={jade}></img>
+                <p class="HTtitle">Managing Director</p>
                 <p>United Kingdom</p>
-                <p><button><a href="mailto:jade@hertechconnect.com">Contact</a></button></p>
             </div>
             <div class="card">
-                <h4>Kelly</h4>
-                <p class="title">COO</p>
+                <h4><b>Kelly</b></h4>
+                <img src={kelly}></img>
+                <p class="HTtitle">Head of Partnerships</p>
                 <p>United States</p>
-                <p><button><a href="mailto:kelly@hertechconnect.com">Contact</a></button></p>
             </div>
             <div class="card">
-                <h4>Roshmi</h4>
-                <p class="title">CTO</p>
+                <h4><b>Roshmi</b></h4>
+                <img src={roshmi}></img>
+                <p class="HTtitle">Head of Mentoring</p>
                 <p>United States</p>
-                <p><button><a href="mailto:rosmi@hertechconnect.com">Contact</a></button></p>
             </div>
             <div class="card">
-                <h4>Phoebe</h4>
-                <p class="title">Head of Product</p>
+                <h4><b>Phoebe</b></h4>
+                <img src={phoebe}></img>
+                <p class="HTtitle">Head of Product</p>
                 <p>United Kingdom</p>
-                <p><button><a href="mailto:phoebe@hertechconnect.com">Contact</a></button></p>
             </div>
             <div class="card">
-                <h4>Vivian</h4>
-                <p class="title">Head of Business</p>
+                <h4><b>Vivian</b></h4>
+                <img src={vivian}></img>
+                <p class="HTtitle">Head of Business</p>
                 <p>United Kingdom</p>
-                <p><button><a href="mailto:vivian@hertechconnect.com">Contact</a></button></p>
             </div>
         </div>
     </div>
